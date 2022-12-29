@@ -4,6 +4,6 @@ import br.com.bruno.payment.paymentservice.model.Payment;
 
 public interface PaymentService {
 
-  void sendPayment(final Payment payment);
+  void sendPayment(final Payment payment) throws InterruptedException;
 
 }

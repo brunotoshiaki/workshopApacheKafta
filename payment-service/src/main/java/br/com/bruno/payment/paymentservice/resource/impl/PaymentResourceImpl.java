@@ -17,7 +17,7 @@ public class PaymentResourceImpl implements PaymentResource {
   private final PaymentService paymentService;
 
   @Override
-  public ResponseEntity<Payment> payment(final Payment payment) {
+  public ResponseEntity<Payment> payment(final Payment payment) throws InterruptedException {
     this.paymentService.sendPayment(payment);
 
     return ResponseEntity.status(HttpStatus.CREATED).build();
